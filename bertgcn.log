@@ -1,0 +1,50 @@
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpbmwaq2c1
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 448517632
+INFO:root:> n_trainable_params: 111846146, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertgcn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000002524F2D2480>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <class 'models.bertgcn.BERTGCN'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph', 'affective_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.5865, Accuracy : 0.7750
+INFO:root:Loss : 0.5499, Accuracy : 0.7734
+INFO:root:Loss : 0.5411, Accuracy : 0.7917
+INFO:root:Loss : 0.5568, Accuracy : 0.7805

@@ -1,5 +1,5 @@
-from models.bertgcn import BERTModel
+from models.bertgcn import BERTGCN
 from models.bertgat import BERTGAT
 from .bertggnn import BERTGGNN
 from .bertgat import BERTGAT
-from .lstm_model import LSTMModel
+from .BERTOnly import BERTOnly
