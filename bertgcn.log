@@ -48,3 +48,1415 @@ INFO:root:Loss : 0.5865, Accuracy : 0.7750
 INFO:root:Loss : 0.5499, Accuracy : 0.7734
 INFO:root:Loss : 0.5411, Accuracy : 0.7917
 INFO:root:Loss : 0.5568, Accuracy : 0.7805
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp0ltt2jiq
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455604736
+INFO:root:> n_trainable_params: 113617922, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001B07D002340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.5950, Accuracy : 0.7188
+INFO:root:Loss : 0.5441, Accuracy : 0.7562
+INFO:root:Loss : 0.5063, Accuracy : 0.7750
+INFO:root:Loss : 0.4867, Accuracy : 0.7797
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpo_16z3b7
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455806464
+INFO:root:> n_trainable_params: 113667334, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x00000273530A2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmprc4m5v7n
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455806464
+INFO:root:> n_trainable_params: 113667334, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001E34C792340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp6hre7b0x
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455806464
+INFO:root:> n_trainable_params: 113667334, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x00000187E11A2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph', 'sdat_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp09r9r6_6
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455806464
+INFO:root:> n_trainable_params: 113667334, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000013889502340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpgkag1tck
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455806464
+INFO:root:> n_trainable_params: 113667334, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001DF8D7E2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp0d6k2tp1
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455604736
+INFO:root:> n_trainable_params: 113617922, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001E817B82340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.5950, Accuracy : 0.7188
+INFO:root:Loss : 0.5441, Accuracy : 0.7562
+INFO:root:Loss : 0.5063, Accuracy : 0.7750
+INFO:root:Loss : 0.4867, Accuracy : 0.7797
+INFO:root:> Validation Accuracy : 0.8041, Validation F1 Score : 0.6454
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 2
+INFO:root:Loss : 0.3330, Accuracy : 0.8867
+INFO:root:Loss : 0.3781, Accuracy : 0.8611
+INFO:root:Loss : 0.3632, Accuracy : 0.8650
+INFO:root:Loss : 0.3601, Accuracy : 0.8627
+INFO:root:> Validation Accuracy : 0.8176, Validation F1 Score : 0.6698
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 3
+INFO:root:Loss : 0.2210, Accuracy : 0.9271
+INFO:root:Loss : 0.1783, Accuracy : 0.9434
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpwroucn4t
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpy__hwde2
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpremwf1tj
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpznn01hz1
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457964032
+INFO:root:> n_trainable_params: 114207746, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x00000207C3F82340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmppiudtr9z
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457964032
+INFO:root:> n_trainable_params: 114207746, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001973CF62340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp0qysevm4
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457964032
+INFO:root:> n_trainable_params: 114207746, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000022C6C7A2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmphagwfbh3
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457964032
+INFO:root:> n_trainable_params: 114207746, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x00000216BF0A2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpeogyl348
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 455604736
+INFO:root:> n_trainable_params: 113617922, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000002C525B72340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.5950, Accuracy : 0.7188
+INFO:root:Loss : 0.5441, Accuracy : 0.7562
+INFO:root:Loss : 0.5063, Accuracy : 0.7750
+INFO:root:Loss : 0.4867, Accuracy : 0.7797
+INFO:root:> Validation Accuracy : 0.8041, Validation F1 Score : 0.6454
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 2
+INFO:root:Loss : 0.3330, Accuracy : 0.8867
+INFO:root:Loss : 0.3781, Accuracy : 0.8611
+INFO:root:Loss : 0.3632, Accuracy : 0.8650
+INFO:root:Loss : 0.3601, Accuracy : 0.8627
+INFO:root:> Validation Accuracy : 0.8176, Validation F1 Score : 0.6698
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 3
+INFO:root:Loss : 0.2210, Accuracy : 0.9271
+INFO:root:Loss : 0.1783, Accuracy : 0.9434
+INFO:root:Loss : 0.1789, Accuracy : 0.9423
+INFO:root:Loss : 0.1946, Accuracy : 0.9349
+INFO:root:> Validation Accuracy : 0.8176, Validation F1 Score : 0.7589
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 4
+INFO:root:Loss : 0.1108, Accuracy : 0.9844
+INFO:root:Loss : 0.0944, Accuracy : 0.9732
+INFO:root:Loss : 0.0800, Accuracy : 0.9753
+INFO:root:Loss : 0.0953, Accuracy : 0.9688
+INFO:root:> Validation Accuracy : 0.8108, Validation F1 Score : 0.7270
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 5
+INFO:root:Loss : 0.0423, Accuracy : 0.9844
+INFO:root:Loss : 0.0225, Accuracy : 0.9974
+INFO:root:Loss : 0.0180, Accuracy : 0.9972
+INFO:root:Loss : 0.0168, Accuracy : 0.9971
+INFO:root:Loss : 0.0228, Accuracy : 0.9932
+INFO:root:> Validation Accuracy : 0.8243, Validation F1 Score : 0.7282
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 6
+INFO:root:Loss : 0.0183, Accuracy : 0.9969
+INFO:root:Loss : 0.0240, Accuracy : 0.9938
+INFO:root:Loss : 0.0247, Accuracy : 0.9948
+INFO:root:Loss : 0.0254, Accuracy : 0.9953
+INFO:root:> Validation Accuracy : 0.8446, Validation F1 Score : 0.7681
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 7
+INFO:root:Loss : 0.0089, Accuracy : 0.9961
+INFO:root:Loss : 0.0062, Accuracy : 0.9983
+INFO:root:Loss : 0.0048, Accuracy : 0.9989
+INFO:root:Loss : 0.0040, Accuracy : 0.9992
+INFO:root:> Validation Accuracy : 0.8176, Validation F1 Score : 0.7449
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 8
+INFO:root:Loss : 0.0009, Accuracy : 1.0000
+INFO:root:Loss : 0.0011, Accuracy : 1.0000
+INFO:root:Loss : 0.0010, Accuracy : 1.0000
+INFO:root:Loss : 0.0013, Accuracy : 1.0000
+INFO:root:> Validation Accuracy : 0.8243, Validation F1 Score : 0.7348
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 9
+INFO:root:Loss : 0.0008, Accuracy : 1.0000
+INFO:root:Loss : 0.0119, Accuracy : 0.9978
+INFO:root:Loss : 0.0231, Accuracy : 0.9961
+INFO:root:Loss : 0.0225, Accuracy : 0.9936
+INFO:root:> Validation Accuracy : 0.8108, Validation F1 Score : 0.7073
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 10
+INFO:root:Loss : 0.0200, Accuracy : 0.9844
+INFO:root:Loss : 0.0220, Accuracy : 0.9922
+INFO:root:Loss : 0.0188, Accuracy : 0.9929
+INFO:root:Loss : 0.0205, Accuracy : 0.9922
+INFO:root:Loss : 0.0187, Accuracy : 0.9925
+INFO:root:> Validation Accuracy : 0.7905, Validation F1 Score : 0.6874
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 11
+INFO:root:Loss : 0.0177, Accuracy : 0.9938
+INFO:root:Loss : 0.0228, Accuracy : 0.9938
+INFO:root:Loss : 0.0194, Accuracy : 0.9938
+INFO:root:Loss : 0.0150, Accuracy : 0.9953
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpn20freeg
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457973248
+INFO:root:> n_trainable_params: 114210050, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000024C37622340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp9kxplxv8
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 460332544
+INFO:root:> n_trainable_params: 114799874, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000026E1CE92340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpsokwyus4
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 457964032
+INFO:root:> n_trainable_params: 114207746, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000017A4E7B2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp2wu9r3fx
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 460332544
+INFO:root:> n_trainable_params: 114799874, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001B8890D2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpdtahahka
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 467456512
+INFO:root:> n_trainable_params: 116580866, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000002565D6A2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpo9axyti7
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpg2pkqkrm
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 465054208
+INFO:root:> n_trainable_params: 115980290, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: riloff
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000001F1D5AE2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> num_heads: 8
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/riloff/train.raw', 'test': './datasets/riloff/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.6323, Accuracy : 0.7125
+INFO:root:Loss : 0.5950, Accuracy : 0.7375
+INFO:root:Loss : 0.5679, Accuracy : 0.7573
+INFO:root:Loss : 0.5601, Accuracy : 0.7625
+INFO:root:> Validation Accuracy : 0.7635, Validation F1 Score : 0.8659
+INFO:root:>> Best model saved saved_models/bertggnn_riloff.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 2
+INFO:root:Loss : 0.5069, Accuracy : 0.8008
+INFO:root:Loss : 0.4994, Accuracy : 0.7986
+INFO:root:Loss : 0.5105, Accuracy : 0.7935
+INFO:root:Loss : 0.5237, Accuracy : 0.7854
+INFO:root:> Validation Accuracy : 0.7635, Validation F1 Score : 0.8659
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 3
+INFO:root:Loss : 0.5035, Accuracy : 0.7969
+INFO:root:Loss : 0.5059, Accuracy : 0.7871
+INFO:root:Loss : 0.4794, Accuracy : 0.7945
+INFO:root:Loss : 0.4807, Accuracy : 0.7856
+INFO:root:> Validation Accuracy : 0.7973, Validation F1 Score : 0.5996
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 4
+INFO:root:Loss : 0.3542, Accuracy : 0.8281
+INFO:root:Loss : 0.3729, Accuracy : 0.8482
+INFO:root:Loss : 0.3852, Accuracy : 0.8438
+INFO:root:Loss : 0.3617, Accuracy : 0.8539
+INFO:root:> Validation Accuracy : 0.8176, Validation F1 Score : 0.6462
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 5
+INFO:root:Loss : 0.2542, Accuracy : 0.8750
+INFO:root:Loss : 0.1946, Accuracy : 0.9167
+INFO:root:Loss : 0.1905, Accuracy : 0.9205
+INFO:root:Loss : 0.2112, Accuracy : 0.9111
+INFO:root:Loss : 0.2102, Accuracy : 0.9130
+INFO:root:> Validation Accuracy : 0.7838, Validation F1 Score : 0.6655
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 6
+INFO:root:Loss : 0.0870, Accuracy : 0.9781
+INFO:root:Loss : 0.0886, Accuracy : 0.9750
+INFO:root:Loss : 0.0782, Accuracy : 0.9802
+INFO:root:Loss : 0.0694, Accuracy : 0.9820
+INFO:root:> Validation Accuracy : 0.7703, Validation F1 Score : 0.7251
+INFO:root:>> Early stopping!
+INFO:numexpr.utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:>> Test Accuracy : 0.7635, Test F1 Score : 0.8659
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpoyjredmg
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 465054208
+INFO:root:> n_trainable_params: 115980290, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: headlines
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x000002C895AE2340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> num_heads: 4
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/headlines/train.raw', 'test': './datasets/headlines/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.7609, Accuracy : 0.4844
+INFO:root:Loss : 0.7454, Accuracy : 0.4719
+INFO:root:Loss : 0.7476, Accuracy : 0.4833
+INFO:root:Loss : 0.7456, Accuracy : 0.4867
+INFO:root:Loss : 0.7359, Accuracy : 0.4944
+INFO:root:Loss : 0.7276, Accuracy : 0.5042
+INFO:root:Loss : 0.7231, Accuracy : 0.5071
+INFO:root:> Validation Accuracy : 0.5960, Validation F1 Score : 0.7469
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 2
+INFO:root:Loss : 0.7116, Accuracy : 0.3750
+INFO:root:Loss : 0.7168, Accuracy : 0.4755
+INFO:root:Loss : 0.7091, Accuracy : 0.5131
+INFO:root:Loss : 0.6774, Accuracy : 0.5675
+INFO:root:Loss : 0.6199, Accuracy : 0.6250
+INFO:root:Loss : 0.5819, Accuracy : 0.6584
+INFO:root:Loss : 0.5543, Accuracy : 0.6865
+INFO:root:Loss : 0.5305, Accuracy : 0.7067
+INFO:root:> Validation Accuracy : 0.8360, Validation F1 Score : 0.8319
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 3
+INFO:root:Loss : 0.2826, Accuracy : 0.8750
+INFO:root:Loss : 0.2541, Accuracy : 0.8990
+INFO:root:Loss : 0.2270, Accuracy : 0.9130
+INFO:root:Loss : 0.2424, Accuracy : 0.9100
+INFO:root:Loss : 0.2399, Accuracy : 0.9099
+INFO:root:Loss : 0.2328, Accuracy : 0.9110
+INFO:root:Loss : 0.2279, Accuracy : 0.9117
+INFO:root:Loss : 0.2263, Accuracy : 0.9135
+INFO:root:> Validation Accuracy : 0.8680, Validation F1 Score : 0.8623
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 4
+INFO:root:Loss : 0.1077, Accuracy : 0.9792
+INFO:root:Loss : 0.0916, Accuracy : 0.9741
+INFO:root:Loss : 0.1137, Accuracy : 0.9643
+INFO:root:Loss : 0.1021, Accuracy : 0.9683
+INFO:root:Loss : 0.1013, Accuracy : 0.9705
+INFO:root:Loss : 0.0944, Accuracy : 0.9731
+INFO:root:Loss : 0.0935, Accuracy : 0.9738
+INFO:root:Loss : 0.0927, Accuracy : 0.9736
+INFO:root:> Validation Accuracy : 0.8880, Validation F1 Score : 0.8829
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 5
+INFO:root:Loss : 0.0639, Accuracy : 0.9844
+INFO:root:Loss : 0.0464, Accuracy : 0.9902
+INFO:root:Loss : 0.0361, Accuracy : 0.9928
+INFO:root:Loss : 0.0339, Accuracy : 0.9913
+INFO:root:Loss : 0.0428, Accuracy : 0.9885
+INFO:root:Loss : 0.0468, Accuracy : 0.9860
+INFO:root:Loss : 0.0465, Accuracy : 0.9853
+INFO:root:Loss : 0.0523, Accuracy : 0.9819
+INFO:root:> Validation Accuracy : 0.8680, Validation F1 Score : 0.8623
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 6
+INFO:root:Loss : 0.0282, Accuracy : 0.9917
+INFO:root:Loss : 0.0284, Accuracy : 0.9911
+INFO:root:Loss : 0.0255, Accuracy : 0.9932
+INFO:root:Loss : 0.0211, Accuracy : 0.9942
+INFO:root:Loss : 0.0221, Accuracy : 0.9928
+INFO:root:Loss : 0.0207, Accuracy : 0.9935
+INFO:root:Loss : 0.0199, Accuracy : 0.9935
+INFO:root:Loss : 0.0228, Accuracy : 0.9923
+INFO:root:> Validation Accuracy : 0.8440, Validation F1 Score : 0.8427
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 7
+INFO:root:Loss : 0.0557, Accuracy : 0.9792
+INFO:root:Loss : 0.0334, Accuracy : 0.9885
+INFO:root:Loss : 0.0237, Accuracy : 0.9914
+INFO:root:Loss : 0.0234, Accuracy : 0.9928
+INFO:root:Loss : 0.0257, Accuracy : 0.9923
+INFO:root:Loss : 0.0230, Accuracy : 0.9936
+INFO:root:Loss : 0.0253, Accuracy : 0.9928
+INFO:root:> Validation Accuracy : 0.8600, Validation F1 Score : 0.8498
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 8
+INFO:root:Loss : 0.0648, Accuracy : 0.9375
+INFO:root:Loss : 0.0043, Accuracy : 0.9970
+INFO:root:Loss : 0.0075, Accuracy : 0.9954
+INFO:root:Loss : 0.0174, Accuracy : 0.9939
+INFO:root:Loss : 0.0151, Accuracy : 0.9946
+INFO:root:Loss : 0.0128, Accuracy : 0.9957
+INFO:root:Loss : 0.0112, Accuracy : 0.9964
+INFO:root:Loss : 0.0100, Accuracy : 0.9969
+INFO:root:> Validation Accuracy : 0.8800, Validation F1 Score : 0.8746
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 9
+INFO:root:Loss : 0.0009, Accuracy : 1.0000
+INFO:root:Loss : 0.0002, Accuracy : 1.0000
+INFO:root:Loss : 0.0002, Accuracy : 1.0000
+INFO:root:Loss : 0.0003, Accuracy : 1.0000
+INFO:root:Loss : 0.0002, Accuracy : 1.0000
+INFO:root:Loss : 0.0003, Accuracy : 1.0000
+INFO:root:Loss : 0.0060, Accuracy : 0.9985
+INFO:root:Loss : 0.0087, Accuracy : 0.9970
+INFO:root:> Validation Accuracy : 0.8760, Validation F1 Score : 0.8687
+INFO:root:>> Early stopping!
+INFO:numexpr.utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:>> Test Accuracy : 0.8880, Test F1 Score : 0.8829
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp5fugbqq0
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:root:cuda memory allocated: 465054208
+INFO:root:> n_trainable_params: 115980290, n_nontrainable_params: 0
+INFO:root:> training arguments:
+INFO:root:>>> model_name: bertggnn
+INFO:root:>>> dataset: headlines
+INFO:root:>>> optimizer: <class 'torch.optim.adam.Adam'>
+INFO:root:>>> initializer: <function xavier_uniform_ at 0x0000014258182340>
+INFO:root:>>> lr: 2e-05
+INFO:root:>>> dropout: 0.1
+INFO:root:>>> l2reg: 1e-05
+INFO:root:>>> num_epoch: 30
+INFO:root:>>> batch_size: 16
+INFO:root:>>> log_step: 20
+INFO:root:>>> embed_dim: 100
+INFO:root:>>> hidden_dim: 768
+INFO:root:>>> bert_dim: 768
+INFO:root:>>> pretrained_bert_name: bert-base-uncased
+INFO:root:>>> max_seq_len: 85
+INFO:root:>>> polarities_dim: 2
+INFO:root:>>> hops: 3
+INFO:root:>>> patience: 5
+INFO:root:>>> device: cuda
+INFO:root:>>> seed: 776
+INFO:root:>>> valset_ratio: 0
+INFO:root:>>> num_heads: 8
+INFO:root:>>> model_class: <module 'models.bertggnn' from 'C:\\Users\\29918\\Desktop\\Sarcasm-Detection-with-BERT-and-GGNN\\models\\bertggnn.py'>
+INFO:root:>>> dataset_file: {'train': './datasets/headlines/train.raw', 'test': './datasets/headlines/test.raw'}
+INFO:root:>>> inputs_cols: ['text_bert_indices', 'bert_segments_indices', 'dependency_graph']
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 1
+INFO:root:Loss : 0.7389, Accuracy : 0.4906
+INFO:root:Loss : 0.6885, Accuracy : 0.5672
+INFO:root:Loss : 0.6273, Accuracy : 0.6396
+INFO:root:Loss : 0.5856, Accuracy : 0.6820
+INFO:root:Loss : 0.5530, Accuracy : 0.7056
+INFO:root:Loss : 0.5177, Accuracy : 0.7297
+INFO:root:Loss : 0.4967, Accuracy : 0.7429
+INFO:root:> Validation Accuracy : 0.8520, Validation F1 Score : 0.8374
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 2
+INFO:root:Loss : 0.3270, Accuracy : 0.8750
+INFO:root:Loss : 0.2323, Accuracy : 0.9076
+INFO:root:Loss : 0.2364, Accuracy : 0.9012
+INFO:root:Loss : 0.2085, Accuracy : 0.9127
+INFO:root:Loss : 0.2022, Accuracy : 0.9179
+INFO:root:Loss : 0.2001, Accuracy : 0.9187
+INFO:root:Loss : 0.2018, Accuracy : 0.9182
+INFO:root:Loss : 0.2076, Accuracy : 0.9156
+INFO:root:> Validation Accuracy : 0.8640, Validation F1 Score : 0.8623
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 3
+INFO:root:Loss : 0.1122, Accuracy : 0.9479
+INFO:root:Loss : 0.0994, Accuracy : 0.9543
+INFO:root:Loss : 0.0844, Accuracy : 0.9647
+INFO:root:Loss : 0.0797, Accuracy : 0.9688
+INFO:root:Loss : 0.0795, Accuracy : 0.9702
+INFO:root:Loss : 0.0783, Accuracy : 0.9711
+INFO:root:Loss : 0.0736, Accuracy : 0.9727
+INFO:root:Loss : 0.0711, Accuracy : 0.9743
+INFO:root:> Validation Accuracy : 0.8800, Validation F1 Score : 0.8762
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 4
+INFO:root:Loss : 0.0215, Accuracy : 0.9931
+INFO:root:Loss : 0.0219, Accuracy : 0.9892
+INFO:root:Loss : 0.0480, Accuracy : 0.9796
+INFO:root:Loss : 0.0487, Accuracy : 0.9774
+INFO:root:Loss : 0.0454, Accuracy : 0.9789
+INFO:root:Loss : 0.0456, Accuracy : 0.9794
+INFO:root:Loss : 0.0438, Accuracy : 0.9801
+INFO:root:Loss : 0.0423, Accuracy : 0.9815
+INFO:root:> Validation Accuracy : 0.8760, Validation F1 Score : 0.8702
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 5
+INFO:root:Loss : 0.0369, Accuracy : 0.9844
+INFO:root:Loss : 0.0195, Accuracy : 0.9922
+INFO:root:Loss : 0.0166, Accuracy : 0.9940
+INFO:root:Loss : 0.0130, Accuracy : 0.9957
+INFO:root:Loss : 0.0132, Accuracy : 0.9952
+INFO:root:Loss : 0.0112, Accuracy : 0.9961
+INFO:root:Loss : 0.0187, Accuracy : 0.9943
+INFO:root:Loss : 0.0197, Accuracy : 0.9938
+INFO:root:> Validation Accuracy : 0.8760, Validation F1 Score : 0.8715
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 6
+INFO:root:Loss : 0.0096, Accuracy : 0.9958
+INFO:root:Loss : 0.0067, Accuracy : 0.9982
+INFO:root:Loss : 0.0050, Accuracy : 0.9989
+INFO:root:Loss : 0.0044, Accuracy : 0.9992
+INFO:root:Loss : 0.0101, Accuracy : 0.9967
+INFO:root:Loss : 0.0212, Accuracy : 0.9935
+INFO:root:Loss : 0.0244, Accuracy : 0.9931
+INFO:root:Loss : 0.0248, Accuracy : 0.9923
+INFO:root:> Validation Accuracy : 0.8720, Validation F1 Score : 0.8693
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 7
+INFO:root:Loss : 0.0091, Accuracy : 0.9965
+INFO:root:Loss : 0.0081, Accuracy : 0.9984
+INFO:root:Loss : 0.0079, Accuracy : 0.9978
+INFO:root:Loss : 0.0081, Accuracy : 0.9976
+INFO:root:Loss : 0.0073, Accuracy : 0.9981
+INFO:root:Loss : 0.0065, Accuracy : 0.9984
+INFO:root:Loss : 0.0057, Accuracy : 0.9986
+INFO:root:> Validation Accuracy : 0.9000, Validation F1 Score : 0.8953
+INFO:root:>> Best model saved saved_models/bertggnn_headlines.pkl
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 8
+INFO:root:Loss : 0.0008, Accuracy : 1.0000
+INFO:root:Loss : 0.0032, Accuracy : 0.9970
+INFO:root:Loss : 0.0065, Accuracy : 0.9954
+INFO:root:Loss : 0.0050, Accuracy : 0.9969
+INFO:root:Loss : 0.0039, Accuracy : 0.9977
+INFO:root:Loss : 0.0101, Accuracy : 0.9969
+INFO:root:Loss : 0.0106, Accuracy : 0.9964
+INFO:root:Loss : 0.0109, Accuracy : 0.9965
+INFO:root:> Validation Accuracy : 0.8800, Validation F1 Score : 0.8721
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 9
+INFO:root:Loss : 0.0194, Accuracy : 1.0000
+INFO:root:Loss : 0.0041, Accuracy : 1.0000
+INFO:root:Loss : 0.0117, Accuracy : 0.9972
+INFO:root:Loss : 0.0111, Accuracy : 0.9980
+INFO:root:Loss : 0.0129, Accuracy : 0.9970
+INFO:root:Loss : 0.0108, Accuracy : 0.9976
+INFO:root:Loss : 0.0152, Accuracy : 0.9965
+INFO:root:Loss : 0.0144, Accuracy : 0.9965
+INFO:root:> Validation Accuracy : 0.8960, Validation F1 Score : 0.8913
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 10
+INFO:root:Loss : 0.0008, Accuracy : 1.0000
+INFO:root:Loss : 0.0012, Accuracy : 1.0000
+INFO:root:Loss : 0.0025, Accuracy : 0.9987
+INFO:root:Loss : 0.0021, Accuracy : 0.9991
+INFO:root:Loss : 0.0017, Accuracy : 0.9993
+INFO:root:Loss : 0.0017, Accuracy : 0.9994
+INFO:root:Loss : 0.0017, Accuracy : 0.9995
+INFO:root:Loss : 0.0019, Accuracy : 0.9991
+INFO:root:> Validation Accuracy : 0.8920, Validation F1 Score : 0.8847
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 11
+INFO:root:Loss : 0.0452, Accuracy : 0.9938
+INFO:root:Loss : 0.0169, Accuracy : 0.9979
+INFO:root:Loss : 0.0314, Accuracy : 0.9950
+INFO:root:Loss : 0.0291, Accuracy : 0.9946
+INFO:root:Loss : 0.0310, Accuracy : 0.9924
+INFO:root:Loss : 0.0272, Accuracy : 0.9932
+INFO:root:Loss : 0.0251, Accuracy : 0.9938
+INFO:root:Loss : 0.0221, Accuracy : 0.9946
+INFO:root:> Validation Accuracy : 0.8960, Validation F1 Score : 0.8924
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+INFO:root:Epoch : 12
+INFO:root:Loss : 0.0030, Accuracy : 1.0000
+INFO:root:Loss : 0.0038, Accuracy : 0.9981
+INFO:root:Loss : 0.0064, Accuracy : 0.9965
+INFO:root:Loss : 0.0050, Accuracy : 0.9974
+INFO:root:Loss : 0.0041, Accuracy : 0.9980
+INFO:root:Loss : 0.0053, Accuracy : 0.9978
+INFO:root:Loss : 0.0077, Accuracy : 0.9967
+INFO:root:Loss : 0.0090, Accuracy : 0.9959
+INFO:root:> Validation Accuracy : 0.8560, Validation F1 Score : 0.8472
+INFO:root:>> Early stopping!
+INFO:numexpr.utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:>> Test Accuracy : 0.9000, Test F1 Score : 0.8953
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmpi449tw4w
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+INFO:pytorch_pretrained_bert.tokenization:loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at C:\Users\29918\.pytorch_pretrained_bert\26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+INFO:pytorch_pretrained_bert.modeling:loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+INFO:pytorch_pretrained_bert.modeling:extracting archive file C:\Users\29918\.pytorch_pretrained_bert\9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir C:\Users\29918\AppData\Local\Temp\tmp416jzf5i
+INFO:pytorch_pretrained_bert.modeling:Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+

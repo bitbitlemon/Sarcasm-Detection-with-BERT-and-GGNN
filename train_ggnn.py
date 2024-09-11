@@ -221,7 +221,7 @@ def main():
     # Hyper Parameters
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', default='bertggnn', type=str)
-    parser.add_argument('--dataset', default='riloff', type=str)
+    parser.add_argument('--dataset', default='headlines', type=str)
     parser.add_argument('--optimizer', default='adam', type=str)
     parser.add_argument('--initializer', default='xavier_uniform_', type=str)
     parser.add_argument('--lr', default=2e-5, type=float)
@@ -241,6 +241,7 @@ def main():
     parser.add_argument('--device', default=None, type=str)
     parser.add_argument('--seed', default=776, type=int)
     parser.add_argument('--valset_ratio', default=0, type=float)
+    parser.add_argument('--num_heads', type=int, default=8, help='Number of attention heads in multi-head attention')
     opt = parser.parse_args()
 
     if opt.seed is not None:
