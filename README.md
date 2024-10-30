@@ -1,8 +1,7 @@
 
 # Sarcasm Detection with BERT and GGNN
 
-This project explores **sarcasm detection** in textual data using a hybrid model combining **BERT** (Bidirectional Encoder Representations from Transformers) for contextual word embeddings and **GGNN** (Gated Graph Neural Networks) for graph-based relational reasoning. The combination of these powerful models enhances the model’s ability to capture both sequential and relational aspects of sarcastic content.
-
+ paper **Integrated transformer and gated graph neural networks detect sarcasm in user-generated content**  code
 ## Overview
 
 Sarcasm detection is an important task in sentiment analysis, especially in the context of social media, where sarcastic statements often contradict the literal sentiment of the text. This project tackles this challenge by integrating **BERT**, which captures deep contextual embeddings, with **GGNN**, which models complex dependencies through graph-structured data.
