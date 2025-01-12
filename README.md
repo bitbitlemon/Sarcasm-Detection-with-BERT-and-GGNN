@@ -60,6 +60,19 @@ Install the required dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
+- Download language model
+```bash
+python -m spacy download en
+```
+- Generate adjacency and affective dependency graphs
+```bash
+python graph.py
+```
+
+- Train the model. Optional arguments can be found in `train_ggnn.py`
+```bash
+python train_ggnn.py
+```
 
 ## Theoretical Background
 
