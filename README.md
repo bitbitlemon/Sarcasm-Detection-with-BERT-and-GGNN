@@ -2,6 +2,8 @@
 # Sarcasm Detection with BERT and GGNN
 
  paper **Integrated transformer and gated graph neural networks detect sarcasm in user-generated content**  code
+ [![DOI](https://zenodo.org/badge/854664840.svg)](https://doi.org/10.5281/zenodo.14755030)
+
 ## Overview
 
 Sarcasm detection is an important task in sentiment analysis, especially in the context of social media, where sarcastic statements often contradict the literal sentiment of the text. This project tackles this challenge by integrating **BERT**, which captures deep contextual embeddings, with **GGNN**, which models complex dependencies through graph-structured data.
