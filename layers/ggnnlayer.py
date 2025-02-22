@@ -11,13 +11,13 @@ class GGNNLayer(nn.Module):
         self.out_features = out_features
         self.num_heads = num_heads
 
-        # 定义权重矩阵，用于消息传播
+        # Defines a weight matrix for message propagation
         self.weight = nn.Parameter(torch.FloatTensor(in_features, out_features))
 
-        # 多头注意力机制
+        # Multi-head attention mechanism
         self.multihead_attn = nn.MultiheadAttention(embed_dim=out_features, num_heads=num_heads)
 
-        # 定义GRU单元，用于更新节点的状态
+        # Define the GRU unit, which is used to update the status of the node
         self.gru = nn.GRUCell(out_features, out_features)
 
         if bias:
@@ -35,20 +35,20 @@ class GGNNLayer(nn.Module):
     def forward(self, text, adj):
         text = text.to(torch.float32)
 
-        # 计算消息传播的隐藏层
+        # Compute the hidden layer of message propagation
         hidden = torch.matmul(text, self.weight)
 
-        # 计算邻居的消息并传播
+        # Computes messages for neighbors and propagates them
         denom = torch.sum(adj, dim=2, keepdim=True) + 1
         aggregated = torch.matmul(adj, hidden) / denom
 
         if self.bias is not None:
             aggregated = aggregated + self.bias
 
-        # 将输入和聚合后的消息通过多头注意力机制
+        # Input and aggregated messages are passed through a multi-head attention mechanism
         attn_output, _ = self.multihead_attn(aggregated, aggregated, aggregated)
 
-        # 将输入和聚合后的消息通过 GRU 单元更新状态
+        # The status of the input and aggregated messages is updated through the GRU unit
         output = self.gru(attn_output.view(-1, self.out_features), text.view(-1, self.out_features))
 
         # 恢复原始的 batch 维度
