@@ -51,7 +51,7 @@ class GGNNLayer(nn.Module):
         # The status of the input and aggregated messages is updated through the GRU unit
         output = self.gru(attn_output.view(-1, self.out_features), text.view(-1, self.out_features))
 
-        # 恢复原始的 batch 维度
+        # Restore the original batch dimension
         output = output.view(text.size(0), text.size(1), self.out_features)
 
         return output
