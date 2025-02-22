@@ -42,7 +42,7 @@ class Instructor:
         self.train_data_loader = DataLoader(dataset=self.trainset, batch_size=self.opt.batch_size, shuffle=True)
         self.test_data_loader = DataLoader(dataset=self.testset, batch_size=self.opt.batch_size, shuffle=False)
 
-        # 选择只使用 BERT 模型
+        # Select to use only the BERT model
         self.model = BERTOnly(bert, opt).to(opt.device)
 
         if opt.device.type == 'cuda':
