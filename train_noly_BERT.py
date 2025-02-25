@@ -15,9 +15,11 @@ from models import BERTGCN, BERTOnly
 import warnings
 import logging
 
+# Ignore warnings
 warnings.filterwarnings('ignore')
 
-logging.basicConfig(filename = "bertgcn.log")
+# Set up logging
+logging.basicConfig(filename="bertgcn.log")
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler(sys.stdout))
@@ -26,29 +28,36 @@ logger.addHandler(logging.StreamHandler(sys.stdout))
 class Instructor:
     def __init__(self, opt):
         self.opt = opt
+        
+        # Initialize tokenizer and BERT model
         tokenizer = Tokenizer4Bert(opt.max_seq_len, opt.pretrained_bert_name)
         bert = BertModel.from_pretrained(opt.pretrained_bert_name)
 
+        # Load datasets
         self.trainset = DatasetReader(opt.dataset_file['train'], tokenizer)
         self.testset = DatasetReader(opt.dataset_file['test'], tokenizer)
 
+        # Split dataset into training and validation sets
         if opt.valset_ratio > 0:
             valset_len = int(len(self.trainset) * opt.valset_ratio)
             self.trainset, self.valset = random_split(self.trainset, (len(self.trainset) - valset_len, valset_len))
         else:
             self.valset = self.testset
 
+        # Create data loaders
         self.val_data_loader = DataLoader(dataset=self.valset, batch_size=self.opt.batch_size, shuffle=False)
         self.train_data_loader = DataLoader(dataset=self.trainset, batch_size=self.opt.batch_size, shuffle=True)
         self.test_data_loader = DataLoader(dataset=self.testset, batch_size=self.opt.batch_size, shuffle=False)
 
-        # Select to use only the BERT model
+        # Select model (BERTOnly in this case)
         self.model = BERTOnly(bert, opt).to(opt.device)
 
+        # Check CUDA memory usage if using GPU
         if opt.device.type == 'cuda':
-            logger.info('cuda memory allocated: {}'.format(torch.cuda.memory_allocated(device=opt.device.index)))
+            logger.info('CUDA memory allocated: {}'.format(torch.cuda.memory_allocated(device=opt.device.index)))
 
     def _print_args(self):
+        """Prints model arguments and the number of trainable/non-trainable parameters."""
         n_trainable_params, n_nontrainable_params = 0, 0
         for p in self.model.parameters():
             n_params = torch.prod(torch.tensor(p.shape))
@@ -62,8 +71,9 @@ class Instructor:
             logger.info('>>> {0}: {1}'.format(arg, getattr(self.opt, arg)))
     
     def _reset_params(self):
+        """Initializes model parameters except for the BERT parameters."""
         for child in self.model.children():
-            if type(child) != BertModel:  # skip bert params
+            if type(child) != BertModel:  # Skip BERT parameters
                 for p in child.parameters():
                     if p.requires_grad:
                         if len(p.shape) > 1:
@@ -73,6 +83,7 @@ class Instructor:
                             torch.nn.init.uniform_(p, a=-stdv, b=stdv)
 
     def _train(self, criterion, optimizer, train_data_loader, val_data_loader):
+        """Training loop with early stopping."""
         max_val_f1 = 0
         global_step = 0
         path = None
@@ -83,6 +94,7 @@ class Instructor:
         for i_epoch in range(self.opt.num_epoch):
             logger.info('>' * 100)
             logger.info('Epoch : {}'.format(i_epoch+1))
+            
             n_correct, n_total, loss_total, counter, tot_train_acc = 0, 0, 0, 0, 0
             
             # switch model to training mode
@@ -132,6 +144,7 @@ class Instructor:
                 logger.info('>> Early stopping!')
                 break
 
+        # Plotting training vs validation accuracy
         epoch_count = range(1, len(epochTrainAcc) + 1)
         plt.plot(epoch_count, epochTrainAcc, 'r-')
         plt.plot(epoch_count, epochValAcc, 'b-')
@@ -143,6 +156,7 @@ class Instructor:
         return path
 
     def _evaluate_acc_f1(self, data_loader):
+        """Evaluates accuracy and F1 score."""
         n_correct, n_total = 0, 0
         t_targets_all, t_outputs_all = None, None
         
@@ -174,6 +188,7 @@ class Instructor:
         return acc, f1
 
     def run(self):
+        """Runs the training and evaluation pipeline."""
         
         # Loss and Optimizer
         criterion = nn.CrossEntropyLoss()
@@ -213,6 +228,7 @@ def main():
     parser.add_argument('--valset_ratio', default=0, type=float)
     opt = parser.parse_args()
 
+    # Set random seeds for reproducibility
     if opt.seed is not None:
         random.seed(opt.seed)
         np.random.seed(opt.seed)
@@ -222,10 +238,12 @@ def main():
         torch.backends.cudnn.benchmark = False
         os.environ['PYTHONHASHSEED'] = str(opt.seed)
 
+    # Model classes
     model_classes = {
         'bertgcn': BERTGCN,
     }
 
+    # Dataset files paths
     dataset_files = {
             'headlines': {
                 'train': './datasets/headlines/train.raw',
@@ -237,16 +255,19 @@ def main():
                 },
     }
 
+    # Input columns for BERT model
     input_colses = {
         'bertgcn': ['text_bert_indices', 'bert_segments_indices', 'dependency_graph', 'affective_graph'],
     }
 
+    # Initializer functions for model parameters
     initializers = {
         'xavier_uniform_': torch.nn.init.xavier_uniform_,
         'xavier_normal_': torch.nn.init.xavier_normal_,
         'orthogonal_': torch.nn.init.orthogonal_,
     }
 
+    # Optimizer options
     optimizers = {
         'adadelta': torch.optim.Adadelta,  # default lr=1.0
         'adagrad': torch.optim.Adagrad,  # default lr=0.01
@@ -257,6 +278,7 @@ def main():
         'sgd': torch.optim.SGD,
     }
 
+    # Set options based on input arguments
     opt.model_class = model_classes[opt.model_name]
     opt.dataset_file = dataset_files[opt.dataset]
     opt.inputs_cols = input_colses[opt.model_name]
@@ -265,6 +287,7 @@ def main():
     opt.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') \
         if opt.device is None else torch.device(opt.device)
     
+    # Initialize and run the training
     ins = Instructor(opt)
     ins.run()
 
