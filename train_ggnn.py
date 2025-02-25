@@ -38,7 +38,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
 from data_utils import Tokenizer4Bert, DatasetReader
-from models.bertggnn import BERTGGNN  # 导入 BERTGGNN 模型
+from models.bertggnn import BERTGGNN  # Import BERTGGNN model
 import warnings
 import logging
 
@@ -54,30 +54,39 @@ class Instructor:
     def __init__(self, opt):
         self.opt = opt
 
+        # Initialize tokenizer and BERT model
         tokenizer = Tokenizer4Bert(opt.max_seq_len, opt.pretrained_bert_name)
         bert = BertModel.from_pretrained(opt.pretrained_bert_name)
 
+        # Read training and test datasets
         self.trainset = DatasetReader(opt.dataset_file['train'], tokenizer)
         self.testset = DatasetReader(opt.dataset_file['test'], tokenizer)
 
+        # Split training set into training and validation sets if ratio is specified
         if opt.valset_ratio > 0:
             valset_len = int(len(self.trainset) * opt.valset_ratio)
             self.trainset, self.valset = random_split(self.trainset, (len(self.trainset) - valset_len, valset_len))
         else:
             self.valset = self.testset
 
+        # Create data loaders for train, validation, and test sets
         self.val_data_loader = DataLoader(dataset=self.valset, batch_size=self.opt.batch_size, shuffle=False)
         self.train_data_loader = DataLoader(dataset=self.trainset, batch_size=self.opt.batch_size, shuffle=True)
         self.test_data_loader = DataLoader(dataset=self.testset, batch_size=self.opt.batch_size, shuffle=False)
 
-        # 使用 BERTGGNN 模型
+        # Use BERTGGNN model if specified in options
         if opt.model_name == 'bertggnn':
             self.model = BERTGGNN(bert, opt).to(opt.device)
 
+        # Log CUDA memory usage if available
         if opt.device.type == 'cuda':
             logger.info('cuda memory allocated: {}'.format(torch.cuda.memory_allocated(device=opt.device.index)))
+        
+        # Print model arguments and parameters
         self._print_args()
+
     def _print_args(self):
+        """Prints the arguments and number of trainable/non-trainable parameters."""
         n_trainable_params, n_nontrainable_params = 0, 0
         for p in self.model.parameters():
             n_params = torch.prod(torch.tensor(p.shape))
@@ -92,8 +101,9 @@ class Instructor:
             logger.info('>>> {0}: {1}'.format(arg, getattr(self.opt, arg)))
 
     def _reset_params(self):
+        """Initializes model parameters except for BERT parameters."""
         for child in self.model.children():
-            if type(child) != BertModel:  # skip bert params
+            if type(child) != BertModel:  # Skip BERT parameters
                 for p in child.parameters():
                     if p.requires_grad:
                         if len(p.shape) > 1:
@@ -103,6 +113,7 @@ class Instructor:
                             torch.nn.init.uniform_(p, a=-stdv, b=stdv)
 
     def _train(self, criterion, optimizer, train_data_loader, val_data_loader):
+        """Trains the model and performs early stopping based on validation F1 score."""
         max_val_f1 = 0
         global_step = 0
         path = None
@@ -110,23 +121,26 @@ class Instructor:
         epochTrainAcc = []
         epochValAcc = []
 
+        # Loop through epochs
         for i_epoch in range(self.opt.num_epoch):
             logger.info('>' * 100)
             logger.info('Epoch : {}'.format(i_epoch + 1))
             n_correct, n_total, loss_total, counter, tot_train_acc = 0, 0, 0, 0, 0
 
-            # switch model to training mode
+            # Set model to training mode
             self.model.train()
             for _, batch in enumerate(train_data_loader):
                 global_step += 1
 
-                # clear gradient accumulators
+                # Zero the gradients
                 optimizer.zero_grad()
 
+                # Prepare inputs and targets
                 inputs = [batch[col].to(self.opt.device) for col in self.opt.inputs_cols]
                 outputs = self.model(inputs)
                 targets = batch['label'].to(self.opt.device)
 
+                # Compute loss and backpropagate
                 loss = criterion(outputs, targets)
                 loss.backward()
                 optimizer.step()
@@ -142,12 +156,15 @@ class Instructor:
                     tot_train_acc += train_acc
                     logger.info('Loss : {:.4f}, Accuracy : {:.4f}'.format(train_loss, train_acc))
 
+            # Evaluate the model on the validation set
             val_acc, val_f1 = self._evaluate_acc_f1(val_data_loader)
 
             epochValAcc.append(val_acc)
             epochTrainAcc.append(tot_train_acc / counter)
 
             logger.info('> Validation Accuracy : {:.4f}, Validation F1 Score : {:.4f}'.format(val_acc, val_f1))
+
+            # Save the best model based on validation F1 score
             if val_f1 > max_val_f1:
                 max_val_f1 = val_f1
                 max_val_epoch = i_epoch
@@ -158,10 +175,12 @@ class Instructor:
                 torch.save(self.model.state_dict(), path)
                 logger.info('>> Best model saved {}'.format(path))
 
+            # Early stopping if no improvement in validation F1 for 'patience' epochs
             if i_epoch - max_val_epoch >= self.opt.patience:
                 logger.info('>> Early stopping!')
                 break
 
+        # Plot training vs validation accuracy
         epoch_count = range(1, len(epochTrainAcc) + 1)
         plt.plot(epoch_count, epochTrainAcc, 'r-')
         plt.plot(epoch_count, epochValAcc, 'b-')
@@ -173,10 +192,11 @@ class Instructor:
         return path
 
     def _evaluate_acc_f1(self, data_loader):
+        """Evaluates the model on the given data loader and returns accuracy and F1 score."""
         n_correct, n_total = 0, 0
         t_targets_all, t_outputs_all = None, None
 
-        # switch model to evaluation mode
+        # Set model to evaluation mode
         self.model.eval()
         with torch.no_grad():
             for _, t_batch in enumerate(data_loader):
@@ -204,14 +224,19 @@ class Instructor:
         return acc, f1
 
     def run(self):
-
-        # Loss and Optimizer
+        """Runs the entire training and evaluation pipeline."""
+        # Set up loss function and optimizer
         criterion = nn.CrossEntropyLoss()
         _params = filter(lambda p: p.requires_grad, self.model.parameters())
         optimizer = self.opt.optimizer(_params, lr=self.opt.lr, weight_decay=self.opt.l2reg)
 
+        # Initialize model parameters
         self._reset_params()
+
+        # Train the model and get the best model path
         best_model_path = self._train(criterion, optimizer, self.train_data_loader, self.val_data_loader)
+
+        # Load the best model and evaluate on the test set
         self.model.load_state_dict(torch.load(best_model_path))
         test_acc, test_f1 = self._evaluate_acc_f1(self.test_data_loader)
         logger.info('>> Test Accuracy : {:.4f}, Test F1 Score : {:.4f}'.format(test_acc, test_f1))
@@ -244,6 +269,7 @@ def main():
     parser.add_argument('--num_heads', type=int, default=8, help='Number of attention heads in multi-head attention')
     opt = parser.parse_args()
 
+    # Set random seeds for reproducibility
     if opt.seed is not None:
         random.seed(opt.seed)
         np.random.seed(opt.seed)
@@ -253,6 +279,7 @@ def main():
         torch.backends.cudnn.benchmark = False
         os.environ['PYTHONHASHSEED'] = str(opt.seed)
 
+    # Model and optimizer selection
     model_classes = {
         'bertggnn': bertggnn,
     }
@@ -268,10 +295,12 @@ def main():
         },
     }
 
+    # Define input columns for BERT model
     input_colses = {
-        'bertggnn': ['text_bert_indices', 'bert_segments_indices', 'dependency_graph'],  # 根据模型需求设置输入列
+        'bertggnn': ['text_bert_indices', 'bert_segments_indices', 'dependency_graph'],  # Set the input columns according to the model
     }
 
+    # Define initializers and optimizers
     initializers = {
         'xavier_uniform_': torch.nn.init.xavier_uniform_,
         'xavier_normal_': torch.nn.init.xavier_normal_,
